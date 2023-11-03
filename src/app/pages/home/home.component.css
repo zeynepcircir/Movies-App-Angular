@@ -1,0 +1,18 @@
+.carousel-inner{
+    height: 1000px;
+}
+
+.carousel-item .carousel-inner img{
+    height: 1000px;
+    object-fit: cover;
+}
+
+.carousel-caption h2{
+    color: rgb(188, 204, 194);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.carousel-caption p{
+    color: rgb(39, 114, 59);
+}

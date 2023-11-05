@@ -10,7 +10,11 @@ button:hover{
 
 form p{
     color: aliceblue;
+    padding-left: 60px;
+    font-size: 30px;
 }
+
+
 
 img{
     width: 100%;
@@ -28,4 +32,21 @@ h5{
 
 .date{
     color: aliceblue;
+}
+
+.not-found{
+    font-size: 22px;
+    font-style: bold;
+    color: rgba(240, 248, 255, 0.913);
+}
+
+.not-found-under{
+    font-size: 15px;
+    font-style: thin;
+    color: rgba(240, 248, 255, 0.598);
+
+}
+
+.not-search{
+    border-radius: 100%;
 }

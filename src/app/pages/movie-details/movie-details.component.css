@@ -1,4 +1,12 @@
-img{
+.movie-background-image{
+    display: flex;
+    height: 50px;
     width: 100%;
-    height: auto;
+}
+
+.movie-banner-image{
+    display: flex;
+    height: 40px;
+    width: 30px;
+    position: left;
 }

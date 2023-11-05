@@ -3,7 +3,7 @@
     <form [formGroup]="searchForm" (ngSubmit)="submitForm()">
         <p>What do you want to watch?</p>
         <div class="row justify-content-center">
-            <div class="mb-3 col-lg-10">
+            <div class="col-lg-11 col-sm-12 mb-3">
                 <div class="input-group ">
                 <input type="text" class="form-control"  formControlName="movieName" placeholder="Search">
                     <button type="button" class="btn">
@@ -34,6 +34,14 @@
             </div>
         </div>
     </div>
+
+    <div
+    class="text-center mt-5" *ngIf="searchResult && searchResult.length === 0">
+    <img class="not-search" src="assets/img/not-found.jpg" style="width: 300px; height: 300px" alt="" />
+
+    <p class="not-found"><br>We Are Sorry, We Can <br> Not Find The Movie :( </p>
+    <p class="not-found-under">Find your movie by Type title, <br> categories, years, etc</p>
+  </div>
 
 
 

@@ -14,16 +14,23 @@ export class SearchComponent {
   ngOnInit(): void {
   }
 
-  searchResult:any;
+  searchResult: any;
   searchForm = new FormGroup({
-    'movieName':new FormControl(null)
+    movieName: new FormControl(null),
   });
+  errorMessage: string = '';
 
   submitForm(){
     console.log(this.searchForm.value,'searchform#');
     this.service.getSearchMovie(this.searchForm.value).subscribe((result)=>{
       console.log(result,'searchmovie##');
       this.searchResult = result.results;
-    });
+    
+    if (this.searchResult.length === 0) {
+      this.errorMessage = 'We Are Sorry, We Can Not Find The Movie :(';
+    } else {
+      this.errorMessage = '';
+    }
+  });
   }
 }

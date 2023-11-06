@@ -1,0 +1,58 @@
+.rowposter {
+    white-space: nowrap;
+    font-size: 0; 
+    overflow-y: hidden;
+    overflow-x: scroll;
+    display: flex;
+}
+
+.movie-card {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px; /* Resimler arasındaki yatay boşluğu ayarlamak için */
+    position: relative;
+    
+}
+
+.movie-number {
+    position: absolute;
+    top: 190px;
+    left: 60px;
+    color: rgb(255, 255, 255); /* Rakam metni rengi gri */
+    background-color: transparent; /* Arkaplan rengi transparan */
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 90px;
+}
+
+.movie-card:hover .movie-number {
+    display: block; /* Üzerine gelindiğinde rakamları göster */
+}
+
+.rowimg {
+    object-fit: cover;
+    width: 200px;
+    height: 300px;
+    box-sizing: content-box;
+    transition: transform 450ms;
+    padding-top: 0px;
+    border-radius: 8%;
+    margin-left: 80px;
+    scroll-behavior: smooth;
+}
+
+
+
+.rowimg:hover {
+    cursor: pointer;
+}
+
+.largeposter {
+    max-height: 300px;
+}
+
+.rowposter::-webkit-scrollbar{
+    display: none;
+}  
+

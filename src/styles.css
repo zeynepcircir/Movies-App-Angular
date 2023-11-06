@@ -8,4 +8,9 @@
 body{
     font-family: 'Ubuntu', sans-serif;
     background-color: rgb(33, 37, 45);
+    overflow-x: hidden;
 }
+
+
+
+       

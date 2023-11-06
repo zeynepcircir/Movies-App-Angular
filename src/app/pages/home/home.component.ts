@@ -12,10 +12,19 @@ export class HomeComponent implements OnInit{
 
   bannerResult:any=[];
   trendingMovieResult:any=[];
+  selectedCategory: string = 'nowPlaying'; // Varsayılan kategori
+  nowPlayingMovies: any[] = [];
+  upcomingMovies: any[] = [];
+  topRatedMovies: any[] = [];
+  popularMovies: any[] = [];
 
   ngOnInit(): void {
       this.bannerData();
       this.trendingData();
+      this.getNowPlayingMovies();
+      this.getUpcomingMovies();
+      this.getTopRatedMovies();
+      this.getPopularMovies();
   }
 
 
@@ -33,4 +42,38 @@ export class HomeComponent implements OnInit{
     });
   }
 
+  selectCategory(category: string) {
+    this.selectedCategory = category;
+  }
+
+  getNowPlayingMovies() {
+    this.service.getNowPlayingData(1) 
+      .subscribe((data) => {
+        this.nowPlayingMovies = data.results;
+      });
+  }
+
+  getUpcomingMovies() {
+    this.service.upComingData(1) 
+      .subscribe((data) => {
+        this.upcomingMovies = data.results;
+      });
+  }
+
+  getTopRatedMovies() {
+    this.service.topRatedData(1) 
+      .subscribe((data) => {
+        this.topRatedMovies = data.results;
+      });
+  }
+
+  getPopularMovies() {
+    this.service.popularData(1) 
+      .subscribe((data) => {
+        this.popularMovies = data.results;
+      });
+  }
 }
+
+
+

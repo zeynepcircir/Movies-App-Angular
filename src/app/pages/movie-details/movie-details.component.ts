@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,EventEmitter, OnInit, Output } from '@angular/core';
 import { MovieApiServiceService } from 'src/app/service/movie-api-service.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -8,9 +8,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./movie-details.component.css']
 })
 export class MovieDetailsComponent implements OnInit{
+  @Output() addToWatchListEvent = new EventEmitter<any>();
 
-  constructor(private service:MovieApiServiceService, private router:ActivatedRoute){}
+  
+  constructor(private service:MovieApiServiceService, private router:ActivatedRoute){
+    
+  }
   getMovieDetailResult:any;
+  
   
   ngOnInit(): void {
     let getParamId = this.router.snapshot.paramMap.get('id');
@@ -18,6 +23,7 @@ export class MovieDetailsComponent implements OnInit{
     
     
     this.getMovie(getParamId);
+    this.displayWatchList();
   }
 
   getMovie(id:any){
@@ -26,4 +32,61 @@ export class MovieDetailsComponent implements OnInit{
       this.getMovieDetailResult = result;
     });
   }
+
+  addToWatchList() {
+    var movieDetails = {
+      backdrop_path: this.getMovieDetailResult.backdrop_path,
+      poster_path: this.getMovieDetailResult.poster_path,
+      original_title: this.getMovieDetailResult.original_title,
+      overview: this.getMovieDetailResult.overview,
+    };
+    this.addToWatchListEvent.emit(movieDetails);
+
+    var watchList = this.getWatchListFromLocalStorage();
+
+    // Check if the movie already exists in the watch list
+    var movieExists = watchList.some(function (movie: any) {
+      return movie.original_title === movieDetails.original_title;
+    });
+
+    if (movieExists) {
+      alert('Bu film zaten izleme listenizde');
+      return;
+    }
+
+    watchList.push(movieDetails);
+    this.saveWatchListToLocalStorage(watchList);
+    this.displayWatchList();
+  }
+
+  getWatchListFromLocalStorage(): any[] {
+    var watchListString = localStorage.getItem('watchList');
+
+    if (watchListString) {
+      return JSON.parse(watchListString);
+    } else {
+      return [];
+    }
+  }
+
+  saveWatchListToLocalStorage(watchList: any[]) {
+    localStorage.setItem('watchList', JSON.stringify(watchList));
+  }
+
+  displayWatchList() {
+    var watchList = this.getWatchListFromLocalStorage();
+    var watchListElement = document.getElementById('watchList');
+    if (watchListElement) {
+      watchListElement.innerHTML = '';
+
+      for (var i = 0; i < watchList.length; i++) {
+        var movieItem = document.createElement('li');
+        movieItem.textContent = watchList[i].original_title;
+        watchListElement.appendChild(movieItem);
+      }
+    }
+  
+  
 }
+}
+

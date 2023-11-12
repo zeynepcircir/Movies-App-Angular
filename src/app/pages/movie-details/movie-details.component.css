@@ -1,12 +1,46 @@
-.movie-background-image{
-    display: flex;
-    height: 50px;
-    width: 100%;
+.movie-background-image img {
+  width: 87%;
+  border-radius: 16px;
+  height: 400px;
+  position: absolute;
+  z-index: 1; /* Düşük bir z-index değeri */
 }
 
-.movie-banner-image{
-    display: flex;
-    height: 40px;
-    width: 30px;
-    position: left;
+.movie-banner-image img {
+  width: 15%;
+  height: 40%;
+  border-radius: 16px;
+  position: absolute;
+  z-index: 2; /* Yüksek bir z-index değeri */
+  bottom: 150px;
+  left: 200px;
 }
+
+.title {
+  position: absolute;
+  top: 68%;
+  left: 30%; /* Posterin sağında görünecek */
+  width: 85%; /* Kalan genişlikte yayılacak */
+  text-align: left; /* Metni sola hizala */
+  color: beige;
+}
+
+/* Verilerin stilini özelleştirin */
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.col {
+  text-align: center;
+  margin-top: 45%; /* İstediğiniz boşluğa göre ayarlayın */
+  
+}
+
+/* İstenirse metin rengi, font boyutu vb. stil ayarları yapılabilir */
+.col p {
+  color: #7e7c7c; /* Örnek metin rengi */
+  font-size: 16px; /* Örnek font boyutu */
+}
+
+

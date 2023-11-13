@@ -10,6 +10,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { MovieApiServiceService } from './service/movie-api-service.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { WatchListComponent } from './pages/watch-list/watch-list.component';
+import { RateModalComponent } from './pages/rate-modal/rate-modal.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { WatchListComponent } from './pages/watch-list/watch-list.component';
     HomeComponent,
     SearchComponent,
     MovieDetailsComponent,
-    WatchListComponent
+    WatchListComponent,
+    RateModalComponent
   ],
   imports: [
     BrowserModule,

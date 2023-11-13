@@ -9,8 +9,10 @@ export class MovieApiServiceService {
 
   constructor(private http:HttpClient) { }
 
+
   baseurl = "https://api.themoviedb.org/3";
   apikey = "045f428069697ad9a03c418ae94fc043"
+
 
   bannerApiData():Observable<any>
   {
@@ -51,6 +53,17 @@ export class MovieApiServiceService {
     return this.http.get(`${this.baseurl}/movie/popular?api_key=${this.apikey}`);
   }
 
+ 
+
+  getMovieReviews(movieId: string): Observable<any> {
+    return this.http.get(`${this.baseurl}/movie/${movieId}/reviews?api_key=${this.apikey}`);
+  }
+
+ 
+  
+  getMovieCast(data:any):Observable<any>{
+    return this.http.get(`${this.baseurl}/movie/${data}/credits?api_key=${this.apikey}`)
+  }
 }
 
 

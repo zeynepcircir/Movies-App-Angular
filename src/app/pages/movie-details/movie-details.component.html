@@ -1,11 +1,7 @@
 <div class="container mt-5">
 
 
-    <div class="button-container">
-        <button type="button" class="btn btn-dark" (click)="addToWatchList()">
-          Add to watch list
-        </button>
-
+     
 
     <div class="movie-background-image">
         <img src="https://image.tmdb.org/t/p/original/{{ getMovieDetailResult.backdrop_path }}">
@@ -24,6 +20,16 @@
         <h1>{{ getMovieDetailResult.original_title }}</h1>
 
     </div>
+
+
+    <div class="button-container">
+        <button type="button" class="btn btn-dark" (click)="addToWatchList()">
+            <i class="bi bi-bookmark-fill"></i>
+        </button>
+    </div>
+
+    <div>
+  
 
     <div class="container mt-5">
         <!-- Diğer içerikler burada yer alır -->
@@ -47,7 +53,77 @@
     </div>
 
 
-
-
+    <div class="container mt-5">
+        <ul class="nav nav-tabs">
+          <li class="nav-item" (click)="tabChange('about-movie')" [class.active]="selectedTab === 'about-movie'">
+            <a class="nav-link">About Movie</a>
+          </li>
+          <li class="nav-item" (click)="tabChange('reviews')" [class.active]="selectedTab === 'reviews'">
+            <a class="nav-link">Reviews</a>
+          </li>
+          <li class="nav-item" (click)="tabChange('cast')" [class.active]="selectedTab === 'cast'">
+            <a class="nav-link">Cast</a>
+          </li>
+        </ul>
+      
+        <div class="tab-content mt-3">
+          <div *ngIf="selectedTab === 'about-movie'">
+            <!-- About Movie content -->
+            <div class="movie-tabs-content-overview">
+              <div class="movie-tabs-content-overview-text">
+                {{ getMovieDetailResult.overview }}
+              </div>
+            </div>
+          </div>
+      
+          <div *ngIf="selectedTab === 'reviews'">
+            <!-- Reviews content -->
+            <div *ngIf="reviewsData.results.length !== 0">
+              <!-- Display reviews -->
+              <div class="movie-tabs-content-reviews-box" *ngFor="let review of reviewsData.results">
+                <div class="movie-tabs-content-reviews-box-left">
+                  <div class="movie-tabs-content-reviews-box-left-profile">
+                    <img src="https://image.tmdb.org/t/p/original/{{ review.author_details.avatar_path }}" alt="Profile Picture">
+                  </div>
+                  <div class="movie-tabs-content-reviews-box-left-rate">
+                    {{ review.author_details.rating }}
+                  </div>
+                </div>
+                <div class="movie-tabs-content-reviews-box-right">
+                  <div class="movie-tabs-content-reviews-right-box-name">
+                    {{ review.author }}
+                  </div>
+                  <div class="movie-tabs-content-reviews-right-box-comment">
+                    {{ review.content }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="reviewsData.results.length === 0">
+              <h2>No reviews yet.</h2>
+            </div>
+          </div>
+      
+          <div *ngIf="selectedTab === 'cast'">
+            <!-- Cast content -->
+            <div class="row">
+              <!-- Display cast members -->
+              <div class="movie-tabs-content-cast-info col-lg-3 col-md-4 mb-5" *ngFor="let castMember of getMovieDetailResult.credits.cast">
+                <div class="movie-tabs-content-cast-info-profile">
+                  <img src="https://image.tmdb.org/t/p/original/{{castMember.profile_path }}" alt="{{ castMember.name }} Profile Picture">
+                </div>
+                <div class="movie-tabs-content-cast-info-name">
+                  {{ castMember.name }}
+                </div>
+              </div>
+            </div>
+         
+        
+</div>
+    
+ 
 
 </div>
+</div>
+
+

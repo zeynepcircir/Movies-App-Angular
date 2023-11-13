@@ -10,11 +10,14 @@ import { ActivatedRoute } from '@angular/router';
 export class MovieDetailsComponent implements OnInit{
   @Output() addToWatchListEvent = new EventEmitter<any>();
 
-  
+  selectedTab: string = 'about-movie';
+  castData: any; 
   constructor(private service:MovieApiServiceService, private router:ActivatedRoute){
     
   }
   getMovieDetailResult:any;
+  reviewsData: any;
+  
   
   
   ngOnInit(): void {
@@ -26,12 +29,26 @@ export class MovieDetailsComponent implements OnInit{
     this.displayWatchList();
   }
 
-  getMovie(id:any){
-    this.service.getMovieDetails(id).subscribe((result)=>{
-      console.log(result,`getmoviedetails#`);
+  getMovie(id: any) {
+    this.service.getMovieDetails(id).subscribe((result) => {
+      console.log(result, 'getmoviedetails#');
       this.getMovieDetailResult = result;
+  
+      this.service.getMovieReviews(id).subscribe((reviewsResult) => {
+        console.log(reviewsResult, 'getmoviereviews#');
+        this.reviewsData = reviewsResult;
+      });
+  
+      this.service.getMovieCast(id).subscribe((castResult) => {
+        console.log(castResult, 'getmoviecast#');
+        // Kontrol burada ekleniyor
+        if (castResult && castResult.cast) {
+          this.castData = castResult.cast;
+        }
+      });
     });
   }
+  
 
   addToWatchList() {
     var movieDetails = {
@@ -86,7 +103,14 @@ export class MovieDetailsComponent implements OnInit{
       }
     }
   
+  }
+
+  tabChange(tabName: string) {
+    this.selectedTab = tabName;
+  }
   
-}
+
+ 
+  
 }
 

@@ -1,3 +1,9 @@
+
+![movie](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/32117a6f-ee52-4d5b-a383-255651022530)
+![movie2](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/771b0bf1-6307-4c1e-84e4-0795b3b5d11f)
+![movie3](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/03856b9b-636d-460d-a441-eebc0f12b95d)
+![movie4](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/3f6a2b11-aa39-41d3-9e41-fc6bc2e9ee81)
+
 # MovieApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.

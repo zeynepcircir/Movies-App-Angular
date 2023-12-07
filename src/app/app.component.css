@@ -1,3 +1,92 @@
-h1{
-    color: pink;
+body{
+    background: #242A32;
 }
+
+#stickyNavbar {
+    position: fixed;
+    top: 0%;
+    z-index: 1000; /* Diğer elementlerden üstte olması için bir z-index değeri */
+}
+
+
+
+.navbar {
+    height: 10%; /* Navbar yüksekliği */
+    background: #242A32;
+    bottom: -3px;
+}
+
+p{
+    color:#67686D;
+}
+
+.container{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+}
+
+
+i{
+    color: #67686D;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    right: 5%;
+    left: 7%;
+    z-index: 1000;
+  }
+  
+  .icon {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icon i {
+    font-size: 24px;
+    color: #ffffff;
+  }
+  
+  .time {
+    font-size: 18px;
+    color: #ffffff;
+  }
+
+  .d-flex {
+    white-space: nowrap;
+    
+}
+
+@media (max-width: 768px) {
+    .d-flex {
+        margin-left: -300%;
+        white-space: nowrap;
+        
+    }
+    i{
+        margin-left: 10px;
+          
+      }
+
+      p{
+        display: flex;
+        padding-top: 0px;
+        padding-left: 0px;
+        justify-content: space-between;
+        align-items: flex-start;
+        color:#67686D;
+
+        
+    }  
+}
+
+
+
+  

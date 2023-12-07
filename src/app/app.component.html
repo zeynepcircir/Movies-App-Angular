@@ -1,13 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container">
-    <div class="row justify-contnet-center">
-        <div class="col-md-5 mt-5">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 
-        </div>
+<body>
+
+  <div class="icon-container">
+    <div class="time">9:41</div>
+    <div class="icon">
+      <i class="bi bi-reception-4"></i>
+      <i class="bi bi-wifi"></i>
+      <i class="bi bi-battery-full"></i>
     </div>
-</div>
+  </div>
+
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar  fixed-bottom">
+    <div class="container">
+      <div class="d-flex">
+        <a class="nav-link" aria-current="page" routerLink="">
+          <i class="bi bi-house"></i>
+          <p>Home</p>
+        </a>
+        <a class="nav-link" routerLink="search">
+          <i class="bi bi-search"></i>
+          <p>Search</p>
+        </a>
+        <a class="nav-link" routerLink="watchlist">
+          <i class="bi bi-bookmark"></i>&nbsp;
+          <p>Watch list</p>
+        </a>
+      </div>
+    </div>
+  </nav>
 
 
+  <router-outlet></router-outlet>
+</body>
 
-<movies></movies>
-
+</html>

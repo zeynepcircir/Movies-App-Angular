@@ -1,0 +1,164 @@
+.rowposter {
+  white-space: nowrap;
+  font-size: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: flex;
+}
+
+.movie-card {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-right: 10px;
+  margin-left: 100px;
+}
+
+.movie-number {
+  position: absolute;
+  top: 190px;
+  left: 60px;
+  color: #242a32;
+  background-color: transparent; /* Arkaplan rengi transparan */
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  -webkit-text-stroke: 1px #3498db; /* Stroke kalınlığı ve rengi */
+}
+
+.movie-card:hover .movie-number {
+  display: block; /* Üzerine gelindiğinde rakamları göster */
+}
+
+.rowimg {
+  object-fit: cover;
+  width: 200px;
+  height: 300px;
+  box-sizing: content-box;
+  transition: transform 450ms;
+  padding-top: 0px;
+  border-radius: 16px;
+  margin-left: -100px;
+  scroll-behavior: smooth;
+}
+
+.rowimg:hover {
+  cursor: pointer;
+}
+
+.largeposter {
+  max-height: 300px;
+}
+
+.rowposter::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-container {
+  max-width: 1200px;
+  margin-left: 115px;
+  margin-top: 100px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.tabs {
+  list-style: none;
+  display: flex;
+  background-color: transparent;
+  color: white;
+  padding: 10px 0 20px;
+}
+
+.tab {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.tab.active {
+  font-weight: bold;
+  border-bottom: 4px solid #585555;
+}
+
+.tab-content {
+  margin-left: 20%;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+  .tab-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0;
+  }
+
+  .tabs {
+    margin-left: -80px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: -100px;
+  }
+
+  .tab-content .col-md-3 {
+    flex: 0 0 calc(33.33% - 30px);
+    max-width: calc(33.33% - 30px);
+    padding-left: 25.1%;
+    margin-bottom: 15px;
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rowimg {
+    width: 144.611px;
+    height: 210px;
+  }
+
+  .col-md-3 .rowimg {
+    width: 100px;
+    height: 145.918px;
+  }
+
+  .rowposter {
+    margin-top: -120px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-right: 10px; /* Daha fazla kaydırmak için padding değerini artırabilirsiniz */
+    text-align: center;
+  }
+  .movie-card {
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: -20px;
+    position: relative;
+  }
+  .movie-number {
+    transform: translate(0%, -65%);
+    font-size: 100px;
+    z-index: 1;
+    margin-left: -10%;
+    position: absolute;
+    top: 95px;
+    left: -10%;
+    transform: translateX(-50%);
+  }
+}

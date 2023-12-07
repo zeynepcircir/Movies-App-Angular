@@ -1,0 +1,26 @@
+<div class="row mt-3">
+  <div class="col">
+    <div class="left"><i class="bi bi-chevron-left"></i></div>
+    <p>Watch list</p>
+
+  </div>
+</div>
+
+
+<div class="row mt-5 movie-list-container">
+  <div class="col-lg-4" *ngFor="let movie of watchList">
+    <div class="row">
+      <div class="col-lg-3 mt-4 mb-4" *ngIf="movie.poster_path">
+        <img src="https://image.tmdb.org/t/p/original/{{ movie.poster_path }}" [routerLink]="['/movie', movie.id]" />
+      </div>
+      <div class="col-lg-9 mt-4 mb-4">
+        <h5>{{ movie.original_title }}</h5>
+
+
+
+        <button type="button" class="btn btn-dark" (click)="removeFromWatchList(movie)">Remove</button>
+
+      </div>
+    </div>
+  </div>
+</div>

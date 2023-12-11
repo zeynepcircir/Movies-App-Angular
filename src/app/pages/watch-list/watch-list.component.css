@@ -1,0 +1,94 @@
+/* Diğer stil kuralları buraya gelebilir */
+img {
+  width: 95px;
+  margin-left: 120px;
+  border-radius: 15px;
+}
+
+h1 {
+  color: azure;
+}
+
+h5 {
+  font-size: 30px;
+  color: #faf8f1;
+  margin-left: 180px;
+}
+
+.release {
+  color: aqua;
+}
+
+button {
+  margin-left: 180px;
+  margin-top: 10px;
+}
+
+.row .col{
+  
+  display: flex;
+  color: #fff;
+  top: 40px;
+
+  
+}
+
+.row .col p{
+  margin-left: 700px;
+  color: var(--text-dark-white-1, #ECECEC);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.left{
+margin-left: -50px;
+}
+
+.left button{
+  border: none;
+  color: #faf8f1;
+  background-color: transparent;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+  img{
+    margin-left: 40px;
+    width: 95px;
+    height: 120px;
+  }
+
+ h5{
+  margin-top: -170px;
+  margin-left: 145px;
+  font-size: 16px;
+ }
+
+ button{
+  margin-top: 10px;
+  margin-left: 150px;
+  font-size: 16px;
+ }
+
+
+
+ .row .col p{
+  margin-left: 130px;
+  white-space: nowrap;
+}
+
+.left{
+margin-left: -130px;
+
+}
+
+
+
+}

@@ -1,5 +1,4 @@
-
- <div sytle="width: 50px"> ![1](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/0125a209-0ecb-4595-9516-b1c28ae6a209)</div>
+![1](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/0125a209-0ecb-4595-9516-b1c28ae6a209)
 ![2](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/ab601a18-1b4a-40e7-9e7b-178f8a239f77)
 ![3](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/7d2619e8-e503-4b90-a50b-f3be2364b9ce)
 ![4](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/71c131b7-0f50-4b2d-8751-79db579738f4)

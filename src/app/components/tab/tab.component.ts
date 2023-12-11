@@ -9,7 +9,7 @@ export class TabComponent {
   @Input() label: string = '';   //input() ile ben bu bileşene dışardan değer aktabiliyorum
   @Input() category: string = '';
   @Input() isActive: boolean = false;
-  @Output() tabSelected = new EventEmitter<void>();  //output() dışarıya event göndermemi sağlıyor
+  @Output() tabSelected = new EventEmitter<void>();  //output() dışarıya event olarak göndermemi sağlıyor
 
   selectTab(): void {
     this.tabSelected.emit();   

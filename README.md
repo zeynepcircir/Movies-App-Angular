@@ -1,8 +1,7 @@
-
-![movie](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/32117a6f-ee52-4d5b-a383-255651022530)
-![movie2](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/771b0bf1-6307-4c1e-84e4-0795b3b5d11f)
-![movie3](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/03856b9b-636d-460d-a441-eebc0f12b95d)
-![movie4](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/3f6a2b11-aa39-41d3-9e41-fc6bc2e9ee81)
+![1](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/0125a209-0ecb-4595-9516-b1c28ae6a209)
+![2](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/ab601a18-1b4a-40e7-9e7b-178f8a239f77)
+![3](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/7d2619e8-e503-4b90-a50b-f3be2364b9ce)
+![4](https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/71c131b7-0f50-4b2d-8751-79db579738f4)
 
 # MovieApp
 

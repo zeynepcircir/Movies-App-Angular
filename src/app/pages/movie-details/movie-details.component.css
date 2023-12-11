@@ -1,5 +1,5 @@
-.left button{
-  border:none;
+.left button {
+  border: none;
   background-color: transparent;
   color: #ffffff;
 }
@@ -27,7 +27,7 @@
   left: 30%; /* Posterin sağında görünecek */
   width: 85%; /* Kalan genişlikte yayılacak */
   text-align: left; /* Metni sola hizala */
-  color: #FFF;
+  color: #fff;
   font-family: Poppins;
   font-size: 16px;
   font-style: normal;
@@ -44,7 +44,6 @@
 .col {
   text-align: center;
   margin-top: 45%; /* İstediğiniz boşluğa göre ayarlayın */
-  
 }
 
 /* İstenirse metin rengi, font boyutu vb. stil ayarları yapılabilir */
@@ -67,25 +66,24 @@
   z-index: 2; /* Diğer elementlerin üzerinde görünmesini sağlar */
 }
 
-.star-btn i{
+.star-btn i {
   color: orange;
 }
 
 /* Tab container */
-.container p{
+.container p {
   margin-top: 15%;
   position: relative;
 }
 
 /* Tab navigation */
 
-
 .nav-item {
   cursor: pointer;
 }
 
 .nav-item a {
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 /* Tab content */
@@ -100,7 +98,7 @@
 }
 
 .movie-tabs-content-overview-text {
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 /* Reviews content */
@@ -161,25 +159,23 @@
   color: #ffffff;
 }
 
-.nav p{
+.nav p {
   color: #ffffff;
   margin-left: 40%;
   margin-top: 4%;
 }
 
-.nav .left{
-  margin-left:7%;
+.nav .left {
+  margin-left: 7%;
   margin-top: 4%;
   color: #ffffff;
-  
 }
 
-
-h1{
+h1 {
   font-size: 18px;
 }
-@media(max-width: 768px) {
-  .movie-background-image img{
+@media (max-width: 768px) {
+  .movie-background-image img {
     width: 390px;
     height: 216.938px;
     top: 109px;
@@ -200,8 +196,7 @@ h1{
     line-height: normal;
   }
 
-
-  .col{
+  .col {
     margin-top: 80%;
   }
 
@@ -214,7 +209,7 @@ h1{
     justify-content: center;
   }
 
-  .nav-item a{
+  .nav-item a {
     font-size: 14px;
   }
 
@@ -223,42 +218,37 @@ h1{
     left: 75%;
   }
 
-  .star-btn i{
+  .star-btn i {
     font-size: 15px;
     background: rgba(37, 40, 54, 0.32);
-    border-radius: 8px;    
+    border-radius: 8px;
     backdrop-filter: blur(10px);
-    
   }
 
-  .star-btn .btn{
+  .star-btn .btn {
     font-size: 15px;
   }
 
-  .button-container{
+  .button-container {
     top: 6%;
     left: 80%;
     background-color: transparent;
   }
 
-  .nav p{
+  .nav p {
     margin-left: 30%;
     margin-top: 15%;
-    color: var(--text-dark-white-1, #ECECEC);
+    color: var(--text-dark-white-1, #ececec);
     font-family: Montserrat;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
   }
-  
-  .nav .left{
-    margin-left:7%;
+
+  .nav .left {
+    margin-left: 7%;
     margin-top: 15%;
     color: #ffffff;
   }
-
-
-  
-  
 }

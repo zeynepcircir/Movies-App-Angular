@@ -62,39 +62,6 @@
   display: none;
 }
 
-.tab-container {
-  max-width: 1200px;
-  margin-left: 115px;
-  margin-top: 100px;
-  background-color: transparent;
-  border-radius: 5px;
-}
-
-.tabs {
-  list-style: none;
-  display: flex;
-  background-color: transparent;
-  color: white;
-  padding: 10px 0 20px;
-}
-
-.tab {
-  margin-right: 20px;
-  color: #fff;
-  text-align: center;
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.tab.active {
-  font-weight: bold;
-  border-bottom: 4px solid #585555;
-}
-
 .tab-content {
   margin-left: 20%;
   padding: 20px;
@@ -111,12 +78,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 0;
-  }
-
-  .tabs {
-    margin-left: -100px;
-
-    margin-top: -100px;
   }
 
   .tab-content .col-md-3 {

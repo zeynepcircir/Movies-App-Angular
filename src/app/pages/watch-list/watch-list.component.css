@@ -24,18 +24,15 @@ button {
   margin-top: 10px;
 }
 
-.row .col{
-  
+.row .col {
   display: flex;
   color: #fff;
   top: 40px;
-
-  
 }
 
-.row .col p{
+.row .col p {
   margin-left: 700px;
-  color: var(--text-dark-white-1, #ECECEC);
+  color: var(--text-dark-white-1, #ececec);
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
@@ -43,52 +40,41 @@ button {
   line-height: normal;
 }
 
-.left{
-margin-left: -50px;
+.left {
+  margin-left: -50px;
 }
 
-.left button{
+.left button {
   border: none;
   color: #faf8f1;
   background-color: transparent;
 }
 
-
-
-
-
 @media (max-width: 768px) {
-
-  img{
+  img {
     margin-left: 40px;
     width: 95px;
     height: 120px;
   }
 
- h5{
-  margin-top: -170px;
-  margin-left: 145px;
-  font-size: 16px;
- }
+  h5 {
+    margin-top: -170px;
+    margin-left: 145px;
+    font-size: 16px;
+  }
 
- button{
-  margin-top: 10px;
-  margin-left: 150px;
-  font-size: 16px;
- }
+  button {
+    margin-top: 10px;
+    margin-left: 150px;
+    font-size: 16px;
+  }
 
+  .row .col p {
+    margin-left: 130px;
+    white-space: nowrap;
+  }
 
-
- .row .col p{
-  margin-left: 130px;
-  white-space: nowrap;
-}
-
-.left{
-margin-left: -130px;
-
-}
-
-
-
+  .left {
+    margin-left: -130px;
+  }
 }

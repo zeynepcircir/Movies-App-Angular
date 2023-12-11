@@ -10,6 +10,10 @@ import {HttpClientModule} from '@angular/common/http';
 import { MovieApiServiceService } from './service/movie-api-service.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { WatchListComponent } from './pages/watch-list/watch-list.component';
+import { TabComponent } from './components/tab/tab.component';
+import { TabsComponent } from './components/tabs/tabs.component';
+
+
 
 @NgModule({
   declarations: [
@@ -17,7 +21,9 @@ import { WatchListComponent } from './pages/watch-list/watch-list.component';
     HomeComponent,
     SearchComponent,
     MovieDetailsComponent,
-    WatchListComponent
+    WatchListComponent,
+    TabComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,

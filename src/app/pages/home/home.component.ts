@@ -1,3 +1,4 @@
+// home.component.ts
 import { Component, OnInit } from '@angular/core';
 import { MovieApiServiceService } from 'src/app/service/movie-api-service.service';
 
@@ -7,16 +8,24 @@ import { MovieApiServiceService } from 'src/app/service/movie-api-service.servic
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor(private service: MovieApiServiceService) {}
-
   bannerResult: any[] = [];
   trendingMovieResult: any[] = [];
-  selectedCategory: string = 'nowPlaying'; // Varsayılan kategori
+  selectedCategory: string = 'nowPlaying'; 
   nowPlayingMovies: any[] = [];
   upcomingMovies: any[] = [];
   topRatedMovies: any[] = [];
   popularMovies: any[] = [];
+
+  movieCategories = [
+    { label: 'Now Playing' , category: 'nowPlaying' }, 
+    { label: 'Upcoming', category: 'upcoming' },
+    { label: 'Top Rated', category: 'topRated' },
+    { label: 'Popular', category: 'popular' }
+  ];
+
+selectedMovies: any;
+
+  constructor(private service: MovieApiServiceService) {}
 
   ngOnInit(): void {
     this.bannerData();
@@ -38,9 +47,34 @@ export class HomeComponent implements OnInit {
     });
   }
 
+
+  getNowPlayingMovies() {
+    this.service.getNowPlayingData(1).subscribe((data) => {
+      this.nowPlayingMovies = data.results;
+    });
+  }
+
+  getUpcomingMovies() {
+    this.service.upComingData(1).subscribe((data) => {
+      this.upcomingMovies = data.results;
+    });
+  }
+
+  getTopRatedMovies() {
+    this.service.topRatedData(1).subscribe((data) => {
+      this.topRatedMovies = data.results;
+    });
+  }
+
+  getPopularMovies() {
+    this.service.popularData(1).subscribe((data) => {
+      this.popularMovies = data.results;
+    });
+  }
+
   selectCategory(category: string) {
     this.selectedCategory = category;
-    this.selectCategoryData();
+    this.selectCategoryData(); 
   }
 
   selectCategoryData() {
@@ -60,31 +94,20 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  getNowPlayingMovies() {
-    this.service.getNowPlayingData(1)
-      .subscribe((data) => {
-        this.nowPlayingMovies = data.results;
-      });
+  getMoviesByCategory(category: string): any[] {
+    switch (category) {
+      case 'nowPlaying':
+        return this.nowPlayingMovies;
+      case 'upcoming':
+        return this.upcomingMovies;
+      case 'topRated':
+        return this.topRatedMovies;
+      case 'popular':
+        return this.popularMovies;
+      default:
+        return [];
+    }
   }
 
-  getUpcomingMovies() {
-    this.service.upComingData(1)
-      .subscribe((data) => {
-        this.upcomingMovies = data.results;
-      });
-  }
-
-  getTopRatedMovies() {
-    this.service.topRatedData(1)
-      .subscribe((data) => {
-        this.topRatedMovies = data.results;
-      });
-  }
-
-  getPopularMovies() {
-    this.service.popularData(1)
-      .subscribe((data) => {
-        this.popularMovies = data.results;
-      });
-  }
+  
 }

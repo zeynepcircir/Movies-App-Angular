@@ -1,0 +1,6 @@
+<div class="tab-container">
+  <ul class="tabs">
+    <app-tab *ngFor="let tab of tabs" [label]="tab.label" [category]="tab.category"
+      [isActive]="selectedCategory === tab.category" (tabSelected)="selectCategory(tab.category)"></app-tab>
+  </ul>
+</div>

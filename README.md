@@ -1,10 +1,10 @@
 <img src="https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/8aabcc89-af62-422e-8755-adbc64bbaabe" alt="Image 3" width="220">
 
- <img src="https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/0e7b515c-abeb-4b49-9d6e-a0c05e11e272" alt="ımage2" width="225"> 
+ <img src="https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/0e7b515c-abeb-4b49-9d6e-a0c05e11e272" alt="ımage2" width="223"> 
 
   <img src="https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/c3016c3a-1975-4a9c-86bf-7f9d202e1eef" alt="Image 3" width="220">
 
- <img src="https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/eb47661b-a5d9-445a-9d3e-5806895b9a42" alt="ımage2" width="225"> 
+ <img src="https://github.com/zeynepcircir/Movies-App-Angular/assets/81877446/eb47661b-a5d9-445a-9d3e-5806895b9a42" alt="ımage2" width="223"> 
 
 
 
